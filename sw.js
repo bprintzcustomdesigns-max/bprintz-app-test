@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bprintz-pod-v2';
+const CACHE_NAME = 'bprintz-pod-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
