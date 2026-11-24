@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Bprintz Custom Designs | DTF & Print-On-Demand Storefront</title>
+    <meta name="description" content="Custom DTF & Print-On-Demand Garment Designer by Bprintz Custom Designs">
 
     <!-- PWA Manifest & Theme Settings -->
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#1d4ed8">
-    <link rel="apple-touch-icon" href="./icon-512.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Bprintz Studio">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
     <!-- Working CDN Libraries for Mockup Capture & Proof Zipping -->
     <script>
@@ -1803,15 +1808,14 @@ renderCart();
 
                                                              updateBulkDiscountUI();
 })();
-        </script>if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js')
-        .then(() => console.log('Service Worker Registered'))
-        .catch((err) => console.error('Service Worker Failed:', err));
-        });
-        }
         </script>
-</body>
-</html>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .catch((err) => console.error('Service Worker Failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
